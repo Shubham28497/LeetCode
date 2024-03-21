@@ -13,3 +13,6 @@
 // Input: x = 10
 // Output: false
 // Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+var isPalindrome = function (x) {
+  return x < 0 ? false : x === +x.toString().split("").reverse().join("");
+};
