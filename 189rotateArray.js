@@ -17,3 +17,12 @@
 // Explanation: 
 // rotate 1 steps to the right: [99,-1,-100,3]
 // rotate 2 steps to the right: [3,99,-1,-100]
+var rotate = function (nums, k) {
+  let size = nums.length;
+  if (k > size) {
+    k = k % size;
+  }
+  const rotated = nums.splice(size - k, size);
+  nums.unshift(...rotated);
+  return nums;
+};
